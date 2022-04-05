@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+	<name>Product Video</name>
+	<id>product_video</id>
+	<version>1.0</version>
+	<author>REDS</author>
+	<link>https://www.agenciaprai.com/</link>
+	<code>reds_product_video</code>
+
+	<file path="admin/view/template/catalog/product_form.twig">
+		<operation>
+			<search><![CDATA[{{ footer }}]]></search>
+			<add position="before"><![CDATA[
+<script type="text/JavaScript">
+function ReplaceComma(input){
+	$(input).val(input.val().replace("," , "."));
+}
+</script>
+			]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[id="input-price"]]></search>
+			<add><![CDATA[id="input-price" oninput="ReplaceComma($(this))"]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[id="input-quantity"]]></search>
+			<add><![CDATA[id="input-quantity" oninput="ReplaceComma($(this))"]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[id="input-length"]]></search>
+			<add><![CDATA[id="input-length" oninput="ReplaceComma($(this))"]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[id="input-width"]]></search>
+			<add><![CDATA[id="input-width" oninput="ReplaceComma($(this))"]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[id="input-height"]]></search>
+			<add><![CDATA[id="input-height" oninput="ReplaceComma($(this))"]]></add>
+		</operation>
+		<operation>
+			<search position="replace"><![CDATA[id="input-weight"]]></search>
+			<add><![CDATA[id="input-weight" oninput="ReplaceComma($(this))"]]></add>
+		</operation>
+
+	</file>
+
+</modification>
