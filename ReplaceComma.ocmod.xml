@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <modification>
-	<name>Product Video</name>
-	<id>product_video</id>
+	<name>Product Form Replace Comma</name>
+	<id>product_form_replace_comma</id>
 	<version>1.0</version>
 	<author>REDS</author>
 	<link>https://www.agenciaprai.com/</link>
-	<code>reds_product_video</code>
+	<code>reds_product_form_replace_comma</code>
 
 	<file path="admin/view/template/catalog/product_form.twig">
 		<operation>
